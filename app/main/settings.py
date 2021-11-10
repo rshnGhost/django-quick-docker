@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'main.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-'''
+#'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -92,7 +92,7 @@ DATABASES = {
         'PASSWORD': os.environ.get('DB_PASS'),
     }
 }
-
+'''
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -135,10 +135,10 @@ STATICFILES_DIRS = [
 	BASE_DIR / 'static',
 	BASE_DIR / 'media',
 ]
-STATIC_ROOT = ROOT_DIR / 'vol/Files/staticFile'
-MEDIA_ROOT = ROOT_DIR / 'vol/Files/mediaFile'
-#STATIC_ROOT = BASE_DIR / 'static'
-#MEDIA_ROOT = BASE_DIR / 'media'
+#STATIC_ROOT = ROOT_DIR / 'vol/Files/staticFile'
+#MEDIA_ROOT = ROOT_DIR / 'vol/Files/mediaFile'
+STATIC_ROOT = os.path.join(BASE_DIR, 'Files/static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Files/media')
 
 LOGIN_REDIRECT_URL = '/'
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'

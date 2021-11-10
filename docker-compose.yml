@@ -13,6 +13,7 @@ services:
     volumes:
       - ./app:/app
       - ./data/web:/vol/web
+      #- static-data:/vol/Files/staticFile
     environment:
       - SECRET_KEY=devsecretkey
       - DEBUG=1
